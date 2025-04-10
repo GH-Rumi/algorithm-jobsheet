@@ -1,7 +1,7 @@
 package day7.codeprogram;
 
-public class MahasiswaBerprestasi11 {
-    Mahasiswa11[] listMhs = new Mahasiswa11[5]; 
+public class nMahasiswaBerprestasi11 {
+    nMahasiswa11[] listMhs = new nMahasiswa11[5]; 
     int idx = 0;
 
     int sequentialSearching(double cari) {
@@ -13,6 +13,21 @@ public class MahasiswaBerprestasi11 {
             }
         }
         return posisi;
+    }
+
+    int findBinarySearch(double cari, int left, int right) {
+        int mid;
+        if (right >= left) {
+            mid = (right + left) / 2;
+            if (cari == listMhs[mid].ipk) {
+                return mid;
+            } else if (listMhs[mid].ipk > cari) {
+                return findBinarySearch(cari, left, mid - 1);
+            } else {
+                return findBinarySearch(cari, mid + 1, right);
+            }
+        }
+        return -1;
     }
 
     void tampilPosisi(double x, int pos) {
@@ -33,7 +48,7 @@ public class MahasiswaBerprestasi11 {
         }
     }
 
-    void tambah(Mahasiswa11 m) {
+    void tambah(nMahasiswa11 m) {
         if (idx < listMhs.length) {
             listMhs[idx] = m;
             idx++;
@@ -43,9 +58,9 @@ public class MahasiswaBerprestasi11 {
     }
     
     void tampil() {
-        for (Mahasiswa11 m : listMhs) {
+        for (nMahasiswa11 m : listMhs) {
             if (m != null) {
-                m.tampilInformasi();
+                m.tampilkanInformasi();
                 System.out.println("--------------------");
             }
         }

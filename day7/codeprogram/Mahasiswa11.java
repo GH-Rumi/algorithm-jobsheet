@@ -1,4 +1,4 @@
-package day6.codeprogram;
+package day7.codeprogram;
 
 public class Mahasiswa11 {
     String nim;

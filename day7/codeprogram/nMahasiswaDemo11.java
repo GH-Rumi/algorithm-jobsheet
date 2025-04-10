@@ -2,9 +2,9 @@ package day7.codeprogram;
 
 import java.util.Scanner;
 
-public class MahasiswaDemo11 {
-    public static void main(String[] args) {
-        MahasiswaBerprestasi11 list = new MahasiswaBerprestasi11();
+public class nMahasiswaDemo11 {
+        public static void main(String[] args) {
+        nMahasiswaBerprestasi11 list = new nMahasiswaBerprestasi11();
         Scanner sc = new Scanner(System.in);
         int jumMhs = 5;
 
@@ -20,7 +20,7 @@ public class MahasiswaDemo11 {
             String ip = sc.nextLine();
             Double ipk = Double.parseDouble(ip);
             System.out.println("------------------------");
-            list.tambah(new Mahasiswa11(nim, nama, kelas, ipk));
+            list.tambah(new nMahasiswa11(nim, nama, kelas, ipk));
         }
 
         list.tampil();
@@ -36,6 +36,13 @@ public class MahasiswaDemo11 {
         int pss = (int) posisi;
         list.tampilPosisi(cari, pss);
         list.tampilDataSearch(cari, pss);
+
+        System.out.println("menggunakan binary searching");
+        System.out.println("------------------------");
+        double posisi2 = list.findBinarySearch(cari, 0, list.idx - 1);
+        int pss2 = (int) posisi2;
+        list.tampilPosisi(cari, pss2);
+        list.tampilDataSearch(cari, pss2);
 
         sc.close();
     }
