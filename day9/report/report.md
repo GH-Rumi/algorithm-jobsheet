@@ -95,3 +95,6 @@ Hasil kode program:
 
 Hasil Kode Program:
 
+![Screenshot](../screenshot/tugas1.png)
+![Screenshot](../screenshot/tugas2.png)
+
